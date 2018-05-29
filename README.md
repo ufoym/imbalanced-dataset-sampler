@@ -5,7 +5,8 @@
 
 - [Introduction](#Introduction)
 - [Usage](#Usage)
-- [Example: Imbalanced MNIST Dataset](#Example)
+- [Example](#Example)
+  - [Imbalanced MNIST Dataset](#Example)
 - [Contributing](#Contributing)
 - [Licensing](#Licensing)
 
