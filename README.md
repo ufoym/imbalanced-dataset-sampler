@@ -29,7 +29,8 @@ train_loader = torch.utils.data.DataLoader(
     train_dataset, 
     sampler=ImbalancedDatasetSampler(train_dataset),
     batch_size=args.batch_size, 
-    **kwargs)
+    **kwargs
+)
 ```
 
 Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability.
