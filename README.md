@@ -11,7 +11,7 @@ To solve this problem, a widely adopted technique is called resampling. It consi
 
 ![resampling](https://user-images.githubusercontent.com/2270240/40656410-e0baa230-6376-11e8-8904-c092fb38fcdc.png)
 
-In this repo, we implement a PyTorch weighted sampler `ImbalancedDatasetSampler` that is able to
+In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSampler` that is able to
 - rebalance the class distributions when sampling from the imbalanced dataset
 - estimate the sampling weights automatically
 - avoid creating a new balanced dataset
