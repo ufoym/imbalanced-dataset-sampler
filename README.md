@@ -53,15 +53,17 @@ Distribution of classes in the imbalanced dataset:
 
 With Imbalanced Dataset Sampler:
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/2270240/40678099-1e0a481c-63b2-11e8-9ec8-f2ac4bf7a637.png">
+  <img src="https://user-images.githubusercontent.com/2270240/40678100-1e543f12-63b2-11e8-9c05-3b168c3fb39f.png">
   (left: test acc in each epoch; right: confusion matrix)
 </p>
 
 Without Imbalanced Dataset Sampler:
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/2270240/40678100-1e543f12-63b2-11e8-9c05-3b168c3fb39f.png">
+  <img src="https://user-images.githubusercontent.com/2270240/40678099-1e0a481c-63b2-11e8-9ec8-f2ac4bf7a637.png">
   (left: test acc in each epoch; right: confusion matrix)
 </p>
+
+Note that there are significant improvements for minor classes such as `2` `6` `9`, while the accuracy of the other classes is preserved.
 
 Maybe you are curious: how about the performance on original MNIST dataset?
 
