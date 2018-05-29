@@ -17,7 +17,9 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 - avoid creating a new balanced dataset
 - mitigate overfitting when it is used in conjunction with data augmentation techniques
 
-![sampling](https://user-images.githubusercontent.com/2270240/40677251-b08f504a-63af-11e8-9653-f28e973a5664.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40677251-b08f504a-63af-11e8-9653-f28e973a5664.png">
+</p>
 
 
 ## Usage
