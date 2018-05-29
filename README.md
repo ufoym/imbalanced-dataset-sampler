@@ -2,7 +2,6 @@
 
 ![license](https://img.shields.io/github/license/ufoym/imbalanced-dataset-sampler.svg)
 
----
 
 - [Introduction](#Introduction)
 - [Usage](#Usage)
