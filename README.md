@@ -44,9 +44,38 @@ Then in each epoch, the loader will sample the entire dataset and weigh your sam
 ## Examples
 ### MNIST
 
+
+#### Imbalanced MNIST Dataset
+Distribution of classes in the imbalanced dataset:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40678060-03c6eb9a-63b2-11e8-9a81-c61c665240e3.png">
+</p>
+
+With Imbalanced Dataset Sampler:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40678099-1e0a481c-63b2-11e8-9ec8-f2ac4bf7a637.png">
+  (left: test acc in each epoch; right: confusion matrix)
+</p>
+
+Without Imbalanced Dataset Sampler:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40678100-1e543f12-63b2-11e8-9c05-3b168c3fb39f.png">
+  (left: test acc in each epoch; right: confusion matrix)
+</p>
+
+Maybe you are curious: how about the performance on original MNIST dataset?
+
 #### Original MNIST Dataset
 Distribution of classes in original dataset:
-![default](https://user-images.githubusercontent.com/2270240/40677603-b4690b24-63b0-11e8-839a-eabafb015bfe.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40677603-b4690b24-63b0-11e8-839a-eabafb015bfe.png">
+</p>
+
+With Imbalanced Dataset Sampler:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40677884-92ca28c6-63b1-11e8-930e-02b867363860.png">
+  (left: test acc in each epoch; right: confusion matrix)
+</p>
 
 Without Imbalanced Dataset Sampler:
 <p align="center">
