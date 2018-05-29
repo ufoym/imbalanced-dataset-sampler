@@ -1,7 +1,7 @@
 # Imbalanced Dataset Sampler
-A (PyTorch) weighted sampler for rebalancing the class distributions when sampling from the imbalanced dataset.
 
 ![license](https://img.shields.io/github/license/ufoym/imbalanced-dataset-sampler.svg)
+
 
 ## Introduction
 
@@ -11,12 +11,15 @@ To solve this problem, a widely adopted technique is called resampling. It consi
 
 ![resampling](https://user-images.githubusercontent.com/2270240/40656410-e0baa230-6376-11e8-8904-c092fb38fcdc.png)
 
-
-
+In this repo, we implement a PyTorch weighted sampler `ImbalancedDatasetSampler` that is able to
+- rebalance the class distributions when sampling from the imbalanced dataset
+- estimate the sampling weights automatically
+- avoid creating a new balanced dataset
+- mitigate overfitting when it is used in conjunction with data augmentation techniques
 
 ## Usage
 
-Simply pass an `ImbalancedDatasetSampler` for the parameter `sampler` when constructing `DataLoader`.
+Simply pass an `ImbalancedDatasetSampler` for the parameter `sampler` when creating a `DataLoader`.
 For example:
 
 ```python
@@ -29,4 +32,4 @@ train_loader = torch.utils.data.DataLoader(
     **kwargs)
 ```
 
-Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability in order to deal with imbalanced data.
+Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability.
