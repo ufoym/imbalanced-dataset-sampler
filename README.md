@@ -39,3 +39,18 @@ train_loader = torch.utils.data.DataLoader(
 ```
 
 Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability.
+
+
+## Examples
+### MNIST
+
+#### Original MNIST Dataset
+Distribution of classes in original dataset:
+![default](https://user-images.githubusercontent.com/2270240/40677603-b4690b24-63b0-11e8-839a-eabafb015bfe.png)
+
+Without Imbalanced Dataset Sampler:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2270240/40677675-e617b7d8-63b0-11e8-9c8e-1ec71429fea2.png">
+  (left: test acc in each epoch; right: confusion matrix)
+</p>
+
