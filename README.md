@@ -2,6 +2,18 @@
 
 ![license](https://img.shields.io/github/license/ufoym/imbalanced-dataset-sampler.svg)
 
+---
+
+# Table of contents
+- [Introduction](#Introduction)
+- [Usage](#Usage)
+- [Example: Imbalanced MNIST Dataset](#Example)
+- [Contributing](#Contributing)
+- [Licensing](#Licensing)
+
+---
+
+<a name="Introduction"/>
 
 ## Introduction
 
@@ -22,6 +34,8 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 </p>
 
 
+<a name="Usage"/>
+
 ## Usage
 
 Simply pass an `ImbalancedDatasetSampler` for the parameter `sampler` when creating a `DataLoader`.
@@ -41,10 +55,10 @@ train_loader = torch.utils.data.DataLoader(
 Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability.
 
 
-## Example: MNIST
+<a name="Example"/>
 
+## Example: Imbalanced MNIST Dataset
 
-#### Imbalanced MNIST Dataset
 Distribution of classes in the imbalanced dataset:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/2270240/40678060-03c6eb9a-63b2-11e8-9a81-c61c665240e3.png">
@@ -64,22 +78,14 @@ Without Imbalanced Dataset Sampler:
 
 Note that there are significant improvements for minor classes such as `2` `6` `9`, while the accuracy of the other classes is preserved.
 
-Maybe you are curious: how about the performance on original MNIST dataset?
+<a name="Contributing"/>
 
-#### Original MNIST Dataset
-Distribution of classes in original dataset:
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/2270240/40677603-b4690b24-63b0-11e8-839a-eabafb015bfe.png">
-</p>
+## Contributing
 
-With Imbalanced Dataset Sampler:
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/2270240/40677884-92ca28c6-63b1-11e8-930e-02b867363860.png">
-  (left: test acc in each epoch; right: confusion matrix)
-</p>
+We appreciate all contributions. If you are planning to contribute back bug-fixes, please do so without any further discussion. If you plan to contribute new features, utility functions or extensions, please first open an issue and discuss the feature with us.
 
-Without Imbalanced Dataset Sampler:
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/2270240/40677675-e617b7d8-63b0-11e8-9c8e-1ec71429fea2.png">
-  (left: test acc in each epoch; right: confusion matrix)
-</p>
+<a name="Licensing"/>
+
+## Licensing
+
+Deepo is [MIT licensed](https://github.com/ufoym/deepo/blob/master/LICENSE).
