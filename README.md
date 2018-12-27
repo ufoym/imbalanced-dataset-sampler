@@ -87,4 +87,4 @@ We appreciate all contributions. If you are planning to contribute back bug-fixe
 
 ## Licensing
 
-[MIT licensed](https://github.com/ufoym/deepo/blob/master/LICENSE).
+[MIT licensed](https://github.com/ufoym/imbalanced-dataset-sampler/blob/master/LICENSE).
