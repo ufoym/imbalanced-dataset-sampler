@@ -87,4 +87,4 @@ We appreciate all contributions. If you are planning to contribute back bug-fixe
 
 ## Licensing
 
-Deepo is [MIT licensed](https://github.com/ufoym/deepo/blob/master/LICENSE).
+[MIT licensed](https://github.com/ufoym/deepo/blob/master/LICENSE).
