@@ -37,11 +37,18 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 
 ## Usage
 
+For a simple start install the package via one of following ways:
+```bash
+python setup.py install
+pip install .
+```
+
+
 Simply pass an `ImbalancedDatasetSampler` for the parameter `sampler` when creating a `DataLoader`.
 For example:
 
 ```python
-from sampler import ImbalancedDatasetSampler
+from torchsampler import ImbalancedDatasetSampler
 
 train_loader = torch.utils.data.DataLoader(
     train_dataset, 

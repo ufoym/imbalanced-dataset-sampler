@@ -8,15 +8,19 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
     Arguments:
         indices (list, optional): a list of indices
         num_samples (int, optional): number of samples to draw
+        callback_get_label func: a callback-like function which takes two arguments - dataset and index
     """
 
-    def __init__(self, dataset, indices=None, num_samples=None):
+    def __init__(self, dataset, indices=None, num_samples=None, callback_get_label=None):
                 
         # if indices is not provided, 
         # all elements in the dataset will be considered
         self.indices = list(range(len(dataset))) \
             if indices is None else indices
-            
+
+        # define custom callback
+        self.callback_get_label = callback_get_label
+
         # if num_samples is not provided, 
         # draw `len(indices)` samples in each iteration
         self.num_samples = len(self.indices) \
@@ -37,11 +41,12 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
         self.weights = torch.DoubleTensor(weights)
 
     def _get_label(self, dataset, idx):
-        dataset_type = type(dataset)
-        if dataset_type is torchvision.datasets.MNIST:
+        if isinstance(dataset, torchvision.datasets.MNIST):
             return dataset.train_labels[idx].item()
-        elif dataset_type is torchvision.datasets.ImageFolder:
+        elif isinstance(dataset, torchvision.datasets.ImageFolder):
             return dataset.imgs[idx][1]
+        elif self.callback_get_label:
+            return self.callback_get_label(dataset, idx)
         else:
             raise NotImplementedError
                 
@@ -51,4 +56,3 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
 
     def __len__(self):
         return self.num_samples
-        
