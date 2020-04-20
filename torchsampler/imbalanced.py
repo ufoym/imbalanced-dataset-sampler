@@ -45,6 +45,8 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
             return dataset.train_labels[idx].item()
         elif isinstance(dataset, torchvision.datasets.ImageFolder):
             return dataset.imgs[idx][1]
+        elif isinstance(dataset, torch.utils.data.Subset):
+            return dataset.dataset.imgs[idx][1]
         elif self.callback_get_label:
             return self.callback_get_label(dataset, idx)
         else:
