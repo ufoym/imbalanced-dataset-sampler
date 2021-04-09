@@ -2,16 +2,6 @@
 
 ![license](https://img.shields.io/github/license/ufoym/imbalanced-dataset-sampler.svg)
 
-
-- [Introduction](#Introduction)
-- [Usage](#Usage)
-- [Example](#Example)
-  - [Imbalanced MNIST Dataset](#Example)
-- [Contributing](#Contributing)
-- [Licensing](#Licensing)
-
----
-
 <a name="Introduction"/>
 
 ## Introduction
@@ -32,15 +22,11 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
   <img src="https://user-images.githubusercontent.com/2270240/40677251-b08f504a-63af-11e8-9653-f28e973a5664.png">
 </p>
 
-
-<a name="Usage"/>
-
 ## Usage
 
 For a simple start install the package via one of following ways:
 ```bash
-python setup.py install
-pip install .
+pip install https://github.com/Borda/imbalanced-dataset-sampler/archive/refs/heads/master.zip
 ```
 
 
@@ -59,9 +45,6 @@ train_loader = torch.utils.data.DataLoader(
 ```
 
 Then in each epoch, the loader will sample the entire dataset and weigh your samples inversely to your class appearing probability.
-
-
-<a name="Example"/>
 
 ## Example: Imbalanced MNIST Dataset
 
@@ -84,13 +67,9 @@ Without Imbalanced Dataset Sampler:
 
 Note that there are significant improvements for minor classes such as `2` `6` `9`, while the accuracy of the other classes is preserved.
 
-<a name="Contributing"/>
-
 ## Contributing
 
 We appreciate all contributions. If you are planning to contribute back bug-fixes, please do so without any further discussion. If you plan to contribute new features, utility functions or extensions, please first open an issue and discuss the feature with us.
-
-<a name="Licensing"/>
 
 ## Licensing
 
