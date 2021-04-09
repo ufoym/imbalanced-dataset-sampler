@@ -16,7 +16,7 @@ except ImportError:
 builtins.__LIGHTNING_SETUP__ = True
 PATH_HERE = path.abspath(path.dirname(__file__))
 
-import torchsampler
+import torchsampler  # noqa: E402
 
 with open(path.join(PATH_HERE, 'requirements.txt'), encoding='utf-8') as fp:
     requirements = [rq.rstrip() for rq in fp.readlines() if not rq.startswith('#')]
