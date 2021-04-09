@@ -1,12 +1,13 @@
 """A setuptools based setup module."""
 
 # Always prefer setuptools over distutils
-from os import path
-from setuptools import setup
 # io.open is needed for projects that support Python 2.7
 # It ensures open() defaults to text mode with universal newlines, and accepts an argument
 #  to specify the text encoding Python 3 only projects can skip this import
 from io import open
+from os import path
+
+from setuptools import setup
 
 try:
     import builtins
@@ -16,7 +17,7 @@ except ImportError:
 builtins.__LIGHTNING_SETUP__ = True
 PATH_HERE = path.abspath(path.dirname(__file__))
 
-import torchsampler
+import torchsampler  # noqa: E402
 
 with open(path.join(PATH_HERE, 'requirements.txt'), encoding='utf-8') as fp:
     requirements = [rq.rstrip() for rq in fp.readlines() if not rq.startswith('#')]
@@ -27,14 +28,11 @@ setup(
     name='torchsampler',
     version=torchsampler.__version__,
     url=torchsampler.__homepage__,
-
     author=torchsampler.__author__,
     author_email=torchsampler.__author_email__,
     license=torchsampler.__license__,
     description=torchsampler.__doc__,
-
     packages=['torchsampler'],
-
     keywords='sampler',
     install_requires=requirements,
     include_package_data=True,
