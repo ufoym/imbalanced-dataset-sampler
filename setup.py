@@ -28,14 +28,11 @@ setup(
     name='torchsampler',
     version=torchsampler.__version__,
     url=torchsampler.__homepage__,
-
     author=torchsampler.__author__,
     author_email=torchsampler.__author_email__,
     license=torchsampler.__license__,
     description=torchsampler.__doc__,
-
     packages=['torchsampler'],
-
     keywords='sampler',
     install_requires=requirements,
     include_package_data=True,
