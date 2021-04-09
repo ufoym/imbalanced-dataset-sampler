@@ -1,12 +1,13 @@
 """A setuptools based setup module."""
 
 # Always prefer setuptools over distutils
-from os import path
-from setuptools import setup
 # io.open is needed for projects that support Python 2.7
 # It ensures open() defaults to text mode with universal newlines, and accepts an argument
 #  to specify the text encoding Python 3 only projects can skip this import
 from io import open
+from os import path
+
+from setuptools import setup
 
 try:
     import builtins
