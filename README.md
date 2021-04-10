@@ -26,7 +26,7 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 
 For a simple start install the package via one of following ways:
 ```bash
-pip install https://github.com/Borda/imbalanced-dataset-sampler/archive/refs/heads/master.zip
+pip install https://github.com/ufoym/imbalanced-dataset-sampler/archive/master.zip
 ```
 
 
