@@ -6,11 +6,11 @@ from os import path
 from setuptools import setup
 
 try:
-    from torchsampler import about
+    from torchsampler import __about__ as about
 except ImportError:
     # alternative https://stackoverflow.com/a/67692/4521646
     sys.path.append("torchsampler")
-    import about
+    import __about__ as about
 
 PATH_HERE = path.abspath(path.dirname(__file__))
 
