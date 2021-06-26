@@ -43,7 +43,7 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
         elif isinstance(dataset, torchvision.datasets.MNIST):
             return dataset.train_labels.tolist()
         elif isinstance(dataset, torchvision.datasets.ImageFolder):
-            return [x[1] for x in trainset.imgs]
+            return [x[1] for x in dataset.imgs]
         elif isinstance(dataset, torchvision.datasets.DatasetFolder):
             return dataset.samples[:][1]
         elif isinstance(dataset, torch.utils.data.Subset):
