@@ -37,9 +37,9 @@ For example:
 from torchsampler import ImbalancedDatasetSampler
 
 train_loader = torch.utils.data.DataLoader(
-    train_dataset, 
+    train_dataset,
     sampler=ImbalancedDatasetSampler(train_dataset),
-    batch_size=args.batch_size, 
+    batch_size=args.batch_size,
     **kwargs
 )
 ```
