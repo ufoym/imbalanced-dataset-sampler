@@ -16,6 +16,7 @@ include requirements.txt
 
 # Exclude build configs
 exclude *.yml
+exclude *.yaml
 
 prune .github
 prune example*
