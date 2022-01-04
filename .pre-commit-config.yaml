@@ -9,7 +9,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
@@ -19,19 +19,19 @@ repos:
       - id: check-docstring-first
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.9.1
+    rev: 5.10.1
     hooks:
       - id: isort
         name: imports
 
   - repo: https://github.com/pre-commit/mirrors-yapf
-    rev: v0.31.0
+    rev: v0.32.0
     hooks:
       - id: yapf
         name: formatting
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 3.9.2
+    rev: 4.0.1
     hooks:
       - id: flake8
         name: PEP8
