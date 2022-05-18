@@ -25,8 +25,9 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 ## Usage
 
 For a simple start install the package via one of following ways:
+
 ```bash
-pip install https://github.com/ufoym/imbalanced-dataset-sampler/archive/master.zip
+pip install torchsampler
 ```
 
 
