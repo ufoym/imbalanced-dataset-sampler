@@ -1,16 +1,8 @@
 """A setuptools based setup module."""
 
-import sys
 from pathlib import Path
 
 from setuptools import setup
-
-try:
-    from torchsampler import __about__ as about
-except ImportError:
-    # alternative https://stackoverflow.com/a/67692/4521646
-    sys.path.append("torchsampler")
-    import __about__ as about
 
 PATH_HERE = Path(__file__).parent
 
@@ -21,11 +13,12 @@ long_description = (PATH_HERE / 'README.md').read_text()
 setup(
     name='torchsampler',
     use_scm_version=True,
-    url=about.__homepage__,
-    author=about.__author__,
-    author_email=about.__author_email__,
-    license=about.__license__,
-    description=about.__doc__,
+    url="https://github.com/ufoym/imbalanced-dataset-sample",
+    author="Ming, et al.",
+    author_email="a@ufoym.com",
+    license="MIT",
+    description="A (PyTorch) imbalanced dataset sampler for oversampling low classes"
+    "and undersampling high frequent ones.",
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=['torchsampler'],
