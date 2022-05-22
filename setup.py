@@ -1,6 +1,5 @@
 """A setuptools based setup module."""
 
-import sys
 from pathlib import Path
 
 from setuptools import setup
