@@ -20,7 +20,7 @@ long_description = (PATH_HERE / 'README.md').read_text()
 
 setup(
     name='torchsampler',
-    version=about.__version__,
+    use_scm_version=True,
     url=about.__homepage__,
     author=about.__author__,
     author_email=about.__author_email__,
@@ -30,6 +30,7 @@ setup(
     long_description_content_type='text/markdown',
     packages=['torchsampler'],
     keywords='sampler,pytorch,dataloader',
+    setup_requires=['setuptools_scm'],
     install_requires=requirements,
     python_requires='>=3.6',
     include_package_data=True,

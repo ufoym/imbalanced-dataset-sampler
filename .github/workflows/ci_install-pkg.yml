@@ -19,8 +19,6 @@ jobs:
 
       - name: Check package
         run: |
-          pip install check-manifest
-          check-manifest
           python setup.py check --metadata --strict
 
       - name: Create package

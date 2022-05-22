@@ -1,3 +1,4 @@
 torch>=1.3
 torchvision>=0.5
 pandas
+importlib_metadata; python_version<'3.8'
