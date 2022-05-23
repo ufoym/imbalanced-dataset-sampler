@@ -1,18 +1,7 @@
-# Manifest syntax https://docs.python.org/2/distutils/sourcedist.html
-graft wheelhouse
+# Manifest syntax https://setuptools.pypa.io/en/latest/deprecated/distutils/commandref.html#sdist-cmd
 
-recursive-exclude __pycache__  *.py[cod] *.orig
-
-# Include the README
-include *.md
-
-# Include the license file
-include LICENSE
-
-recursive-include torchsampler *.py
-
-# Include the Requirements
-include requirements.txt
+# FIXME: switching to a src/ layout would obviate the need for this file entirely.
+#        see https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#src-layout
 
 # Exclude build configs
 exclude *.yml
@@ -20,5 +9,3 @@ exclude *.yaml
 
 prune .github
 prune example*
-prune temp*
-prune test*
