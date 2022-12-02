@@ -12,7 +12,7 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
     Arguments:
         indices: a list of indices
         num_samples: number of samples to draw
-        callback_get_label: a callback-like function which takes two arguments - dataset and index
+        callback_get_label: a callback-like function that takes the dataset itself as an argument and should return a list of labels for all samples in the dataset
     """
 
     def __init__(
