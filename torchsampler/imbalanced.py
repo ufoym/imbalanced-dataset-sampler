@@ -56,7 +56,7 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
         elif isinstance(dataset, torchvision.datasets.DatasetFolder):
             return dataset.samples[:][1]
         elif isinstance(dataset, torch.utils.data.Subset):
-            return dataset.dataset.imgs[:][1]
+            return [dataset.dataset.imgs[ind][1] for ind in dataset.indices]
         elif isinstance(dataset, torch.utils.data.Dataset):
             return dataset.get_labels()
         else:
